@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>林安的个人主页</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 个人信息展示区 -->
+        <section class="profile-section">
+            <div class="profile-header">
+                <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=cartoon%20pixel%20art%20avatar%20of%20a%20content%20strategist%2C%20minimalist%20style%2C%20blue%20background&image_size=square" alt="林安的头像" class="avatar">
+                <h1>林安</h1>
+                <p class="tagline">一个正在学习用 AI 做产品的内容策划</p>
+                <div class="contact-info">
+                    <a href="mailto:linan@example.com" class="contact-link">邮箱：linan@example.com</a>
+                    <a href="https://github.com/linan" class="contact-link" target="_blank">GitHub</a>
+                    <a href="https://twitter.com/linan" class="contact-link" target="_blank">Twitter</a>
+                </div>
+            </div>
+            <div class="profile-info">
+                <div class="info-item">
+                    <h3>我现在主要在做</h3>
+                    <p>整理自己的作品和写作方向</p>
+                </div>
+                <div class="info-item">
+                    <h3>我的兴趣</h3>
+                    <p>AI 应用、写作、旅行</p>
+                </div>
+                <div class="info-item">
+                    <h3>我的特点</h3>
+                    <p>喜欢把复杂问题讲成人话</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 作品展示区 -->
+        <section class="projects-section">
+            <h2>我的作品</h2>
+            <div class="projects-container">
+                <div class="project-item">
+                    <div class="project-image">
+                        <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=content%20strategy%20dashboard%2C%20minimalist%20design%2C%20blue%20theme&image_size=landscape_16_9" alt="内容策略仪表盘">
+                    </div>
+                    <div class="project-content">
+                        <h3>内容策略仪表盘</h3>
+                        <p>为企业设计的内容策略分析工具，帮助团队跟踪内容表现和优化策略。</p>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <div class="project-image">
+                        <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=AI%20chatbot%20interface%2C%20minimalist%20design%2C%20blue%20theme&image_size=landscape_16_9" alt="AI聊天机器人">
+                    </div>
+                    <div class="project-content">
+                        <h3>AI聊天机器人</h3>
+                        <p>基于自然语言处理的智能聊天机器人，用于客户服务和信息查询。</p>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <div class="project-image">
+                        <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=content%20marketing%20campaign%20results%2C%20data%20visualization%2C%20minimalist%20design&image_size=landscape_16_9" alt="内容营销活动">
+                    </div>
+                    <div class="project-content">
+                        <h3>内容营销活动</h3>
+                        <p>为科技公司策划的内容营销活动，提升品牌知名度和用户参与度。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 数字分身聊天区 -->
+        <section class="chat-section">
+            <h2>数字分身聊天</h2>
+            <div class="chat-container">
+                <div class="chat-messages" id="chatMessages">
+                    <!-- 消息将在这里显示 -->
+                </div>
+                <div class="chat-tags">
+                    <span class="tag" onclick="sendTagMessage('你现在在做什么？')">你现在在做什么？</span>
+                    <span class="tag" onclick="sendTagMessage('你有哪些作品？')">你有哪些作品？</span>
+                    <span class="tag" onclick="sendTagMessage('怎么联系你？')">怎么联系你？</span>
+                </div>
+                <div class="chat-input">
+                    <input type="text" id="messageInput" placeholder="输入你的问题...">
+                    <button id="sendButton">发送</button>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

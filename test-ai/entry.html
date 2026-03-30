@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Key 输入</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0069d9;
+        }
+        .error {
+            color: red;
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>请输入 API Key</h1>
+        <form id="apiKeyForm">
+            <div class="form-group">
+                <label for="apiKey">DeepSeek API Key:</label>
+                <input type="text" id="apiKey" placeholder="请输入你的 API Key" required>
+            </div>
+            <button type="submit">进入主页</button>
+        </form>
+        <div id="errorMessage" class="error"></div>
+    </div>
+    <script>
+        document.getElementById('apiKeyForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const apiKey = document.getElementById('apiKey').value.trim();
+            if (apiKey) {
+                // 存储 API Key 到 localStorage
+                localStorage.setItem('DEEPSEEK_API_KEY', apiKey);
+                // 跳转到主页
+                window.location.href = 'index.html';
+            } else {
+                document.getElementById('errorMessage').textContent = '请输入有效的 API Key';
+            }
+        });
+    </script>
+</body>
+</html>
