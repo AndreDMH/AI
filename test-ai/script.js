@@ -9,7 +9,7 @@ const API_URL = 'https://api.deepseek.com/v1/chat/completions';
 
 // 检查API Key是否存在，如果不存在则跳转到入口页面
 if (!DEEPSEEK_API_KEY) {
-    window.location.href = 'entry.html';
+    window.location.href = '/entry.html';
 }
 
 // 数字分身配置信息（来自rule.md）
